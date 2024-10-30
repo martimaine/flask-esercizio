@@ -2,52 +2,57 @@ from flask import Flask
 from flask import request
 from flask import render_template
 from flask import jsonify
-
+import service
 
 app = Flask(__name__)
 
-# obj = { "subs": ["orsociro@gmail.com", "mattia.folcarelli@gmail.com", "ernesto@gmail.com"]}
+
+@app.route('/home')
+def home():
+    return render_template('Home.html')
+
+@app.route('/')
+def index():
+    partecipanti = service.get_all_partecipanti()
+    return render_template('index.html', partecipanti=partecipanti)
+
+@app.route('/partecipanti/<int:id>')
+def detail(id):
+    partecipante = service.get_partecipante_by_id(id)
+    if partecipante is None:
+        return render_template('404.html'), 404
+    return render_template('detail.html', partecipante=partecipante)
+
+@app.route('/register')
+def register():
+    return render_template('register.html')
 
 
-@app.route("/")
-def PageHome():
-    return render_template("PageHome.html")
 
 
-@app.route("/sub", methods=["GET"])
-def index_subs():
+@app.route('/partecipanti', methods=['GET'])
+def api_get_partecipanti():
+    partecipanti = service.get_all_partecipanti()
+    return jsonify(partecipanti)
+
+@app.route('/partecipanti/<int:id>', methods=['GET'])
+def api_get_partecipante(id):
+    partecipante = service.get_partecipante_by_id(id)
+    if partecipante is None:
+        return jsonify({"error": "Partecipante non trovato"}), 404
+    return jsonify(partecipante)
+
+@app.route('/partecipanti', methods=['POST'])
+def api_add_partecipante():
+    new_partecipante = request.get_json()
     
-    data = readData()
-    return jsonify(data)
+    if 'nome' not in new_partecipante or 'cognome' not in new_partecipante or 'email' not in new_partecipante:
+        return jsonify({"error": "Dati incompleti"}), 400
 
-@app.route("/partecipanti", methods=["GET"])
-def partecipanti():
+    partecipante_creato = service.add_partecipante(new_partecipante)
     
-    data = readPartecipantiData()
-    return jsonify(data)
-
-@app.route("/sub/<int:id>", methods=["GET"])
-def show_subs(id):
-    return showData(id)
+    return jsonify(partecipante_creato), 201
 
 
-@app.route("/sub", methods=["POST"])
-def create_subs():
-    newSub = request.form["sub"]
-    # obj["subs"].append(newSub)
-    createData("\n" + newSub , "a")
-    return jsonify({"data": newSub})
-
-
-@app.route("/sub", methods=["PUT"])
-def update_subs():
-    newSub = request.json["sub"]
-    id = request.json["index"]
-    updateData(id, newSub)
-    return jsonify({"data": newSub})
-
-
-@app.route("/sub/<int:id>", methods=["DELETE"])
-def delete_subs(id):
-    element = deleteData(id)
-    return jsonify({"data": element})
+if __name__ == '__main__':
+    app.run(debug=True)

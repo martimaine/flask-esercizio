@@ -1,40 +1,27 @@
-def readData():
-    try:
-        with open("data.txt", "r", encoding="utf-8") as file:
-            return file.read().split("\n")
-    except FileNotFoundError as error:
-        print("nullo")
-    return []
+import json
 
-def readPartecipantiData():
-    try:
-        with open("partecipanti.txt", "r", encoding="utf-8") as file:
-            return file.read().split("\n")
-    except FileNotFoundError as error:
-        print("nullo")
-    return []
+def load_data():
+    with open('db.json', 'r') as f:
+        return json.load(f)
 
-def showData(index):
-    return readData()[index]
+def save_data(data):
+    with open('db.json', 'w') as f:
+        json.dump(data, f, indent=4)
 
+def get_all_partecipanti():
+    return load_data()
 
-def createData(data, writeMode):
-    try:
-        with open("data.txt", writeMode, encoding="utf-8") as file:
-            file.write(data)
-    except FileNotFoundError as error:
-        print("file non trovato")
+def get_partecipante_by_id(id):
+    partecipanti = load_data()
+    return next((p for p in partecipanti if p['id'] == id), None)
 
-
-def updateData(index, data):
-    fileList = readData()
-    fileList[int(index)]= data
-    dataString = "\n".join(fileList)
-    createData(dataString, "w")
-
-def deleteData(index):
-    fileList = readData()
-    el = fileList.pop(index)
-    dataString = "\n".join(fileList)
-    createData(dataString, "w")
-    return el
+def add_partecipante(new_partecipante):
+    partecipanti = load_data()
+    
+    new_id = max(p['id'] for p in partecipanti) + 1 if partecipanti else 1
+    new_partecipante['id'] = new_id
+    
+    partecipanti.append(new_partecipante)
+    save_data(partecipanti)
+    
+    return new_partecipante

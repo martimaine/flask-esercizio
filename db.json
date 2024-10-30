@@ -1,186 +1,140 @@
-{
-    "partecipanti": {
-        "name": "partecipanti"
+[
+    {
+        "id": 1,
+        "nome": "Mario",
+        "cognome": "Rossi",
+        "email": "mario.rossi@example.com"
     },
-    "concorrenti": [
-        {
-            "id": "31",
-            "nome e cognome": "Rebecca kilo",
-            "Provenienza": "Milano"
-        },
-        {
-            "id": "83",
-            "nome e cognome": "Rebecca kilo",
-            "Provenienza": "Milano"
-        },
-        {
-            "id": "53",
-            "nome e cognome": "Rebecca kilo",
-            "Provenienza": "Milano"
-        }
-    ],
-    "nuovo partecipante": [
-        {
-            "id": "1",
-            "prezzo": "9.90",
-            "nome": "Monstera Obliqua"
-        },
-        {
-            "id": "3",
-            "prezzo": "11.90",
-            "nome": "San Severia"
-        },
-        {
-            "id": "2",
-            "prezzo": "5.60",
-            "nome": "Crassula"
-        },
-        {
-            "id": "1",
-            "prezzo": "9.90",
-            "nome": "Monstera Obliqua"
-        },
-        {
-            "id": "1",
-            "prezzo": "9.90",
-            "nome": "Monstera Obliqua"
-        },
-        {
-            "id": "2",
-            "prezzo": "5.60",
-            "nome": "Crassula"
-        },
-        {
-            "id": "2",
-            "prezzo": "5.60",
-            "nome": "Crassula"
-        },
-        {
-            "id": "3",
-            "prezzo": "11.90",
-            "nome": "San Severia"
-        },
-        {
-            "id": "1",
-            "prezzo": "9.90",
-            "nome": "Monstera Obliqua"
-        }
-    ],
-    "Logstorico": [
-        {
-            "id": "0",
-            "idCarello": 1,
-            "idCliente": 53
-        }
-    ],
-    "acquisti": [
-        {
-            "id": "47e7",
-            "totaleSpesa": 64,
-            "paymentData": {
-                "nome": "Martina",
-                "cognome": "dsad",
-                "metodoPagamento": "cc",
-                "accettaCookie": true,
-                "accettaPrivacy": true,
-                "numeroCarta": "465659685+"
-            }
-        },
-        {
-            "id": "b5b6",
-            "totaleSpesa": 64,
-            "paymentData": {
-                "nome": "Martina",
-                "cognome": "dsad",
-                "metodoPagamento": "cc",
-                "accettaCookie": true,
-                "accettaPrivacy": true,
-                "numeroCarta": "465659685+"
-            }
-        },
-        {
-            "id": "041c",
-            "totaleSpesa": 64,
-            "paymentData": {
-                "nome": "Martina",
-                "cognome": "",
-                "metodoPagamento": "cc",
-                "accettaCookie": true,
-                "accettaPrivacy": true,
-                "numeroCarta": "465659685+"
-            }
-        },
-        {
-            "id": "3372",
-            "totaleSpesa": 64,
-            "paymentData": {
-                "nome": "Martina",
-                "cognome": "dsadsa",
-                "metodoPagamento": "cc",
-                "accettaCookie": true,
-                "accettaPrivacy": true,
-                "numeroCarta": "dtydshtf"
-            }
-        },
-        {
-            "id": "89e8",
-            "totaleSpesa": 64,
-            "paymentData": {
-                "nome": "Martina",
-                "cognome": "dsadsa",
-                "metodoPagamento": "cc",
-                "accettaCookie": true,
-                "accettaPrivacy": true,
-                "numeroCarta": "87678"
-            }
-        },
-        {
-            "id": "9cb5",
-            "totaleSpesa": 64,
-            "paymentData": {
-                "nome": "fdsad",
-                "cognome": "dsadsa",
-                "metodoPagamento": "cc",
-                "accettaCookie": true,
-                "accettaPrivacy": true,
-                "numeroCarta": "dasdsa"
-            }
-        },
-        {
-            "id": "4e05",
-            "totaleSpesa": 64,
-            "paymentData": {
-                "nome": "Martina",
-                "cognome": "dsadsa",
-                "metodoPagamento": "paypal",
-                "accettaCookie": true,
-                "accettaPrivacy": true,
-                "emailPaypal": "dsdas"
-            }
-        },
-        {
-            "id": "ae09",
-            "totaleSpesa": 64,
-            "paymentData": {
-                "nome": "Martina",
-                "cognome": "dsadsa",
-                "metodoPagamento": "cc",
-                "accettaCookie": true,
-                "accettaPrivacy": true,
-                "numeroCarta": "dasdsa"
-            }
-        },
-        {
-            "id": "1f04",
-            "totaleSpesa": 64,
-            "paymentData": {
-                "nome": "Martina",
-                "cognome": "dsadsa",
-                "metodoPagamento": "paypal",
-                "accettaCookie": true,
-                "accettaPrivacy": true,
-                "emailPaypal": "dsdsa"
-            }
-        }
-    ]
-}
+    {
+        "id": 2,
+        "nome": "Luigi",
+        "cognome": "Verdi",
+        "email": "luigi.verdi@example.com"
+    },
+    {
+        "id": 3,
+        "nome": "Giulia",
+        "cognome": "Bianchi",
+        "email": "giulia.bianchi@example.com"
+    },
+    {
+        "id": 4,
+        "nome": "Alessandro",
+        "cognome": "Esposito",
+        "email": "alessandro.esposito@example.com"
+    },
+    {
+        "id": 5,
+        "nome": "Chiara",
+        "cognome": "Russo",
+        "email": "chiara.russo@example.com"
+    },
+    {
+        "id": 6,
+        "nome": "Federico",
+        "cognome": "Ferrari",
+        "email": "federico.ferrari@example.com"
+    },
+    {
+        "id": 7,
+        "nome": "Laura",
+        "cognome": "Marini",
+        "email": "laura.marini@example.com"
+    },
+    {
+        "id": 8,
+        "nome": "Simone",
+        "cognome": "Romano",
+        "email": "simone.romano@example.com"
+    },
+    {
+        "id": 9,
+        "nome": "Alessia",
+        "cognome": "Colombo",
+        "email": "alessia.colombo@example.com"
+    },
+    {
+        "id": 10,
+        "nome": "Stefano",
+        "cognome": "Costa",
+        "email": "stefano.costa@example.com"
+    },
+    {
+        "id": 11,
+        "nome": "Valentina",
+        "cognome": "Bruno",
+        "email": "valentina.bruno@example.com"
+    },
+    {
+        "id": 12,
+        "nome": "Massimo",
+        "cognome": "Rizzo",
+        "email": "massimo.rizzo@example.com"
+    },
+    {
+        "id": 13,
+        "nome": "Silvia",
+        "cognome": "Moretti",
+        "email": "silvia.moretti@example.com"
+    },
+    {
+        "id": 14,
+        "nome": "Marco",
+        "cognome": "Barbieri",
+        "email": "marco.barbieri@example.com"
+    },
+    {
+        "id": 15,
+        "nome": "Francesca",
+        "cognome": "Fontana",
+        "email": "francesca.fontana@example.com"
+    },
+    {
+        "id": 16,
+        "nome": "Giorgio",
+        "cognome": "Gallo",
+        "email": "giorgio.gallo@example.com"
+    },
+    {
+        "id": 17,
+        "nome": "Elena",
+        "cognome": "Conti",
+        "email": "elena.conti@example.com"
+    },
+    {
+        "id": 18,
+        "nome": "Andrea",
+        "cognome": "De Luca",
+        "email": "andrea.deluca@example.com"
+    },
+    {
+        "id": 19,
+        "nome": "Sofia",
+        "cognome": "Greco",
+        "email": "sofia.greco@example.com"
+    },
+    {
+        "id": 20,
+        "nome": "Lorenzo",
+        "cognome": "Giordano",
+        "email": "lorenzo.giordano@example.com"
+    },
+    {
+        "nome": "asdsad",
+        "cognome": "dasdsa",
+        "email": "sdad@fdds.com",
+        "id": 21
+    },
+    {
+        "nome": "test 12wrdfewfews",
+        "cognome": "dsadsadsadsadasd",
+        "email": "dsdasdsa@fscdfcsd.com",
+        "id": 22
+    },
+    {
+        "nome": "test 12wrdfewfews",
+        "cognome": "dsadsadsadsadasd",
+        "email": "martyy_92@hotmail.it",
+        "id": 23
+    }
+]
