@@ -43,13 +43,13 @@
             <ul
               class="nav col-12 col-lg-auto me-lg-auto mb-2 justify-content-center mb-md-0">
 
-              <a href="./index.html" class="btn btn-secondary me-2"
+              <a href="{{ url_for('home') }}" class="btn btn-secondary me-2"
                 class="btn btn-secondary">Home</a>
 
-              <a href="./pages/projects.html"
+              <a href="{{ url_for('index') }}"
                 class="btn btn-secondary me-2">Partecipanti in gara</a>
 
-              <a href="./pages/contacts.html"
+              <a href="{{ url_for('register') }}"
                 class="btn btn-secondary me-2">Iscrizioni</a>
 
             </ul>
