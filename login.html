@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="stile.css">
+    <title>Login </title>
+        <div class="login-container">
+            <div class="login-header">
+                <h1>Accedi</h1>
+                <p>Inserisci le tue credenziali</p>
+            </div>
+            <form id="loginForm" onsubmit="return validateForm(event)">
+                <div class="form-group">
+                    <label for="email">Email</label>
+                    <input 
+                        type="email" 
+                        id="email" 
+                        name="email" 
+                        required 
+                        placeholder="La tua email"
+                    >
+                    <div class="error" id="emailError"></div>
+                </div>
+                <div class="form-group">
+                    <label for="password">Password</label>
+                    <input 
+                        type="password" 
+                        id="password" 
+                        name="password" 
+                        required 
+                        placeholder="La tua password"
+                        minlength="6"
+                    >
+                    <div class="error" id="passwordError"></div>
+                </div>
+                <button type="submit" class="login-button">Accedi</button>
+
+                <style>* {
+                    margin: 0;
+                    padding: 0;
+                    box-sizing: border-box;
+                }
+        
+                body {
+                    min-height: 100vh;
+                    font-family: Arial, sans-serif;
+                    background-image: url('/api/placeholder/1920/1080');
+                    background-size: cover;
+                    background-position: center;
+                    background-repeat: no-repeat;
+                    background-attachment: fixed;
+                }
+        
+                .content-overlay {
+                    min-height: 100vh;
+                    background-color: rgba(0, 0, 0, 0.5); 
+                    color: white;
+                    padding: 20px;
+                }
+        
+                .container {
+                    max-width: 1200px;
+                    margin: 0 auto;
+                    padding: 20px;
+                }
+        
+                h1 {
+                    font-size: 3rem;
+                    margin-bottom: 1rem;
+                    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+                }
+        
+                p {
+                    font-size: 1.2rem;
+                    line-height: 1.6;
+                    margin-bottom: 1rem;
+                    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+                }
+        
+                .content-box {
+                    background-color: rgba(0, 0, 0, 0.7);
+                    padding: 2rem;
+                    border-radius: 10px;
+                    backdrop-filter: blur(5px);
+                }</style>
+
+            </form>
+            
+        </div>
+             <script src="./js/LoginScript.js"></script>
+        
+            
+ 
+</head>
+<body>
+    
+</body>
+</html>
