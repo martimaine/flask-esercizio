@@ -6,6 +6,13 @@ def readData():
         print("nullo")
     return []
 
+def readPartecipantiData():
+    try:
+        with open("partecipanti.txt", "r", encoding="utf-8") as file:
+            return file.read().split("\n")
+    except FileNotFoundError as error:
+        print("nullo")
+    return []
 
 def showData(index):
     return readData()[index]

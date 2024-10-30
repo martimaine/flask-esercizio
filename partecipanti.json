@@ -1,0 +1,17 @@
+[
+    {
+      "id": 1,
+      "nome": "Paolo",
+      "cognome": "Marco"
+    },
+    {
+      "id": 2,
+      "nome": "ciccio",
+      "cognome": "bello"
+    },
+    {
+      "id": 3,
+      "nome": "Sara",
+      "cognome": "Corro"
+    }
+  ]

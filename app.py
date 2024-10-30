@@ -20,6 +20,11 @@ def index_subs():
     data = readData()
     return jsonify(data)
 
+@app.route("/partecipanti", methods=["GET"])
+def partecipanti():
+    
+    data = readPartecipantiData()
+    return jsonify(data)
 
 @app.route("/sub/<int:id>", methods=["GET"])
 def show_subs(id):
